@@ -150,7 +150,7 @@ function App() {
   );
 
   useEffect(function () {
-    fetch("https://quiz-36de.onrender.com")
+    fetch("https://quiz-36de.onrender.com/questions")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
